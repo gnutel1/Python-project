@@ -1,12 +1,23 @@
-#вводим переменные
-cena = 67
-kolvo = 52
-itog = kolvo*cena
-#цикл для проверки скидки и вывод
+Задача 5: Калькулятор скидки
+Рассчитываем итоговую стоимость покупки с прогрессивной системой скидок
+Исходные данные
+cena = 67 
+kolvo = 52 
+Базовая стоимость
+itog = kolvo * cena
+print('Калькулятор скидки')
+print(f'Цена за ед.: {cena} руб.  Количество: {kolvo}')
+print(f'Базовая стоимость: {itog} руб.')
+Применение скидки в зависимости от суммы
 if itog < 1000:
-    itog = itog * 1
+    skidka = 0
+    itog_final = itog
 elif 1000 <= itog <= 5000:
-    itog = itog * 0.95
+    skidka = 5
+    itog_final = round(itog * 0.95, 1)
 else:
-    itog = itog * 0.9
-print(round(itog, 1))
+    skidka = 10
+    itog_final = round(itog * 0.9, 1)
+Вывод всех этапов расчёта
+print(f'Скидка: {skidka}%')
+print(f'Итого к оплате: {itog_final} руб.')
